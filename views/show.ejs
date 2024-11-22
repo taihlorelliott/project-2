@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= crafts.itemName %></title>
+</head>
+<body>
+    <h1><%= crafts.itemName %></h1>
+    <h3>Color/Pattern: <%= crafts.color %></h3>
+
+    <p>Quantity: <%= crafts.quantity %> </p>
+    <form action="/crafts/<%=crafts._id%>/edit">
+        <button type="submit">Edit <%=crafts.itemName%></button>
+    </form>
+    <form action="/crafts/<%=crafts._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%=crafts.itemName%></button>
+    </form>
+    <form action="/crafts/<%=crafts.category%>">
+        <button type="submit">Return to <%=crafts.category%></button>
+    </form>
+    <form action="/category">
+        <button type="submit">View Categories</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new</title>
+</head>
+<body>
+    <h1>Add an item to your craft room:</h1>
+    <form action="/crafts" method="POST">
+        <label for="dropdown">Select Category:</label>
+        <select id="dropdown" name="category">
+            <option value="select">Select</option>
+            <option value="adhesives">Adhesives</option>
+            <option value="notions">Notions</option>
+            <option value="paper">Paper</option>
+            <option value="textiles">Textiles</option>
+            <option value="tools">Tools</option>
+            <option value="vinyl">Vinyl</option>
+        </select>
+        <label>Discriptive Name:</label>
+        <input name="itemName" type="text" value="(cardstock, glossy, etc..)"/>
+        <label>Color/Pattern(leave blank if not applicable):</label>
+        <input name="color" type="text">
+        <label>Is this item in Stock?</label>
+        <input name="inStock" type="checkbox"/>
+        <label for="quantity">Quantity:</label>
+        <select name="quantity" id="quantity">
+            <% for (let i = 0; i <= 100; i++){%>
+                <option value="<%= i%>">
+                    <%= i %>
+                </option>
+            <%}%>
+        </select>
+        <button type="submit">Add Item</button>
+    </form>
+    <form action="/category">
+        <button type="submit">View Categories</button>
+    </form>
+</body>
+</html>
