@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Adhesives</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: "Crafty Girls";
+        }
+    </style>
 </head>
-<body>
-    <h1>Adhesives:</h1>
-    <ul>
+<body class="bg-success p-2" style="--bs-bg-opacity: .5;">
+    <h1 class="fs-1 text-center p-4 mb-1 mt-5">Adhesives:</h1>
+    <ul class="d-grid gap-2 col-4 mx-auto list-unstyled">
         <% crafts.forEach (crafts => { %>
             <% if (crafts.category === "adhesives") { %>
-                <li><a href="/crafts/<%=crafts._id%>" id="indexList"><%= crafts.itemName %></a></li>
+                <li><a class="btn btn-outline-success text-dark" href="/crafts/<%=crafts._id%>" id="indexList"><%= crafts.itemName %></a></li>
             <%}%>
         <%})%>
     </ul>
-    <form action="/crafts/new">
-        <button type="submit">Add Item to Craft Room</button>
-    </form>
-    <form action="/category">
-        <button type="submit">View Categories</button>
-    </form>
+    
+    <div class="d-grid gap-2 col-6 mx-auto p-5 mb-1 mt-3">
+        <a class="btn btn-outline-success text-dark" href="/crafts/new">Add Item to Craft Room</a>
+        <a class="btn btn-outline-success text-dark" href="/category">View Categories</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

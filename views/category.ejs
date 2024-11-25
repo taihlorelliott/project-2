@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Categories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: "Crafty Girls";
+        }
+    </style>
 </head>
-<body>
-    <h1>Please choose from one of the following categories:</h1>
-    <ul>
-        <form action="/crafts/adhesives">
-            <button type="submit">Adhesives</button>
-        </form>
-        <form action="/crafts/notions">
-            <button type="submit">Notions</button>
-        </form>
-        <form action="/crafts/paper">
-            <button type="submit">Paper</button>
-        </form>
-        <form action="/crafts/textiles">
-            <button type="submit">Textiles</button>
-        </form>
-        <form action="/crafts/tools">
-            <button type="submit">Tools</button>
-        </form>
-        <form action="/crafts/vinyl">
-            <button type="submit">Vinyl</button>
-        </form>
+<body class="bg-success p-2" style="--bs-bg-opacity: .5;">
+    <h1 class="fs-1 text-center p-4 mb-1 mt-5">Please choose from one of the following categories:</h1>
+    <ul class="d-grid gap-2 col-6 mx-auto">
+        <div class="d-grid gap-2 d-md-block" >
+            <a class="btn btn-outline-success text-dark" href="/crafts/adhesives">Adhesives</a>
+            <a class="btn btn-outline-success text-dark" href="/crafts/notions">Notions</a>
+            <a class="btn btn-outline-success text-dark" href="/crafts/paper">Paper</a>
+            <a class="btn btn-outline-success text-dark" href="/crafts/textiles">Textiles</a>
+            <a class="btn btn-outline-success text-dark" href="/crafts/tools">Tools</a>
+            <a class="btn btn-outline-success text-dark" href="/crafts/vinyl">Vinyl</a>  
+        </div>
+        
     </ul>
-    <form action="/crafts/new">
-        <button type="submit">Add Item to Craft Room</button>
-    </form>
+    <div class="d-grid gap-2 col-6 mx-auto p-5 mb-1 mt-3">
+        <a class="btn btn-outline-success text-dark" href="/crafts/new">Add Item to Craft Room</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
