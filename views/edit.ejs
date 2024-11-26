@@ -66,44 +66,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-<body>
-    <h1>Update <%= crafts.itemName %> :</h1>
-    <form action="/crafts/<%=crafts._id%>?_method=PUT" method="POST">
-        <label for="dropdown">Select Category:</label>
-        <select id="dropdown" name="category" >
-            <option value="<%= crafts.category%>"><%= crafts.category%></option>
-            <option value="adhesives">Adhesives</option>
-            <option value="notions">Notions</option>
-            <option value="paper">Paper</option>
-            <option value="textiles">Textiles</option>
-            <option value="tools">Tools</option>
-            <option value="vinyl">Vinyl</option>
-        </select>
-        <label>Discriptive Name:</label>
-        <input name="itemName" type="text" value="<%= crafts.itemName %>"/>
-        <label>Color/Pattern(leave blank if not applicable):</label>
-        <input name="color" type="text" value="<%= crafts.color %>"/>
-        <label for="inStock">Is this item in Stock?</label>
-        <input 
-            name="inStock" 
-            type="checkbox" 
-            <% if (crafts.inStock){ %>
-                checked
-            <%}%>
-            />
-        <label for="quantity">Quantity:</label>
-        <select name="quantity" id="quantity">
-            <% for (let i = crafts.quantity; i <= 100; i++){%>
-                <option value="<%= i%>">
-                    <%= i %>
-                </option>
-            <%}%>
-        </select>
-        <button type="submit">Update Item</button>
-    </form>
-    <form action="/category">
-        <button type="submit">View Categories</button>
-    </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+
 </html>

@@ -132,6 +132,7 @@ app.put("/crafts/:craftsId", async (req, res) => {
     } else {
         req.body.inStock = false
     }
+    //find items by id and update them thru the paramaters of craftsid in the req.body
     await Crafts.findByIdAndUpdate(req.params.craftsId, req.body);
     res.redirect("/category")
 })
